@@ -1,0 +1,28 @@
+{
+  "name": "clydewang",
+  "version": "1.0.0",
+  "description": "Home sweet home",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunclyde/clydewang.git"
+  },
+  "keywords": [
+    "Sunclyde",
+    "ClydeWang",
+    "Clyde",
+    "Wang",
+    "Homepage"
+  ],
+  "author": "Clyde Wang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sunclyde/clydewang/issues"
+  },
+  "homepage": "https://github.com/sunclyde/clydewang#readme",
+  "dependencies": {
+  }
+}
