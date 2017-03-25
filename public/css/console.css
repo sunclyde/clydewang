@@ -1,0 +1,72 @@
+@import"font.css";
+* {
+	font-family:proxima-nova,"HelveticaNeue",Helvetica,Arial,sans-serif;
+	margin:0 auto;
+}
+body {
+	background:#000;
+	color:white;
+}
+a {
+	color:#999;
+}
+h1 {
+	font-size:24px;
+}
+h2 {
+	font-size:20px;
+	color:#ccc;
+}
+h3 {
+	font-size:16px;
+	color:#999;
+}
+p {
+	font-size:14px;
+}
+.form-item {
+	margin:10px;
+}
+.form-item label {
+	display:inline-block;
+	width:35%;
+}
+.form-item input {
+	width:60%;
+	border:2px solid white;
+}
+.form-action {
+	text-align:center;
+}
+.form-action button {
+	margin:0 10px;
+	padding:4px;
+	width:80px;
+	border:1px solid #999;
+	background:black;
+	color:white;
+}
+.container {
+	width:300px;
+	height:300px;
+	border:2px solid white;
+	border-radius:4px;
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	margin:auto;
+}
+.login-title {
+	margin:10px;
+	padding-bottom:10px;
+	text-align:center;
+	border-bottom:1px solid gray;
+}
+.login-form {
+	margin:80px 10px;
+}
+.login-form .form-action {
+	margin-top:40px;
+}
