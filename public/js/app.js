@@ -1,10 +1,12 @@
 require.config({
     paths: {
-        'jquery' :          'lib/jquery-3.1.1.min',
-        'jquery-validate' : 'lib/jquery-validate.min',
-        'componentMgr' :      'module/componentMgr',
-        'console' :         'app/console/console',
-        'console1' :         'app/console/console1'
+        'jquery' :              'lib/jquery-3.1.1.min',
+        'jquery-validate' :     'lib/jquery-validate.min',
+        'componentMgr' :        'module/componentMgr',
+        'urlconfig' :           'app/config/urlconfig',
+        'console' :             'app/console/console',
+        'console-login' :       'app/console/console-login',
+        'console-register' :    'app/console/console-register'
     }
 });
 
@@ -31,7 +33,7 @@ function loadNamespace() {
 }
 
 function loadComponents(componentMgr, namespace) {
-    var components = componentMgr.getComponents(app.page.namespace) || [],
+    var components = componentMgr.getComponents(namespace) || [],
         componentsNames = components,
         initializedComponents = [],
         duplicatedComponents = [],
@@ -49,7 +51,7 @@ function loadComponents(componentMgr, namespace) {
                 continue;
             }
             try {
-                var componentParam = componentMgr.getComponentParam(namespace);
+                var componentParam = componentMgr.getComponentParam(namespace, componentName);
                 component.init(componentParam);
                 initializedComponents.push(componentName);
             } catch (e) {

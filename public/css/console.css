@@ -58,13 +58,13 @@ p {
 	bottom:0;
 	margin:auto;
 }
-.login-title {
+.login-title, .register-title {
 	margin:10px;
 	padding-bottom:10px;
 	text-align:center;
 	border-bottom:1px solid gray;
 }
-.login-form {
+.login-form, .register-form {
 	margin:80px 10px;
 }
 .login-form .form-action {

@@ -2,7 +2,6 @@
 <html>
 <head>
 	<link rel="stylesheet" href="../css/console.css">
-	<script type="text/javascript" src="../js/module/require.js" async data-main="../js/app.js"></script>
 </head>
 <body data-namespace="console-login">
 	<div class="container">
@@ -10,7 +9,7 @@
 			<h1>Login</h1>
 		</div>
 		<div class="login-form">
-			<form name="consoleLogin" id="consoleLogin" method="post" action="/console/register">
+			<form name="consoleLogin" id="consoleLogin" method="post" action="/console/login">
 				<div class="form-item">
 					<label for="consoleUser">User:</label>
 					<input type="text" name="consoleUser" minlength="8" maxlength="32" required/>
@@ -23,8 +22,8 @@
 					<a href="console/forget">Forget Password?</a>
 				</div>
 				<div class="form-action">
-					<button class="button" type="button">Register</button>
-					<button class="button" type="submit">Submit</button>
+					<button class="button register" type="button">Register</button>
+					<button class="button submit" type="submit">Submit</button>
 				</div>
 			</form>
 		</div>

@@ -1,10 +1,13 @@
 define(function() {
 	var config = {
 		'global' : {
+			'urlconfig' : {}
         },
 		'console-login' : {
+			'console-login' : {}
         },
 		'console-register' : {
+            'console-register' : {}
         }
 	};
 
