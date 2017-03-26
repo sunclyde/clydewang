@@ -2,29 +2,29 @@
 <html>
 <head>
 	<link rel="stylesheet" href="../css/console.css">
-	<script type="text/javascript" src="../js/lib/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="../js/module/require.js" async data-main="../js/app.js"></script>
 </head>
-<body>
+<body data-namespace="console-login">
 	<div class="container">
 		<div class="login-title">
 			<h1>Login</h1>
 		</div>
 		<div class="login-form">
-			<form id="console" method="post" action="/console">
+			<form name="consoleLogin" id="consoleLogin" method="post" action="/console/register">
 				<div class="form-item">
 					<label for="consoleUser">User:</label>
-					<input type="text" name="consoleUser" />
+					<input type="text" name="consoleUser" minlength="8" maxlength="32" required/>
 				</div>
 				<div class="form-item">
 					<label for="consolePassword">Password:</label>
-					<input type="text" name="consolePassword" />
+					<input type="text" name="consolePassword" minlength="8" maxlength="32" required/>
 				</div>
 				<div class="form-item">
 					<a href="console/forget">Forget Password?</a>
 				</div>
 				<div class="form-action">
-					<button type="button">Register</button>
-					<button class="submit" type="button">Submit</button>
+					<button class="button" type="button">Register</button>
+					<button class="button" type="submit">Submit</button>
 				</div>
 			</form>
 		</div>

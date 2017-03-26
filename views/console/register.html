@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="../css/console.css">
+	<script type="text/javascript" src="../js/lib/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="register-title">
+			<h1>Login</h1>
+		</div>
+		<div class="register-form">
+			<form id="consoleRegister" method="post" action="/console">
+				<div class="form-item">
+					<label for="consoleUser">User:</label>
+					<input type="text" name="consoleUser" />
+				</div>
+				<div class="form-item">
+					<label for="consolePassword">Password:</label>
+					<input type="text" name="consolePassword" />
+				</div>
+				<div class="form-item">
+					<a href="console/forget">Forget Password?</a>
+				</div>
+				<div class="form-action">
+					<button type="button">Register</button>
+					<button class="submit" type="button">Submit</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<% include footer.html %>
+</body>
+</html>

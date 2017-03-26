@@ -1,11 +1,83 @@
-requirejs.config({
+require.config({
     paths: {
-    	jquery: 'lib/jquery-3.1.1.min',
-        console: 'app/console/console'
+        'jquery' :          'lib/jquery-3.1.1.min',
+        'jquery-validate' : 'lib/jquery-validate.min',
+        'componentMgr' :      'module/componentMgr',
+        'console' :         'app/console/console',
+        'console1' :         'app/console/console1'
     }
 });
 
-requirejs(['jquery', 'console'], function ($, console) {
-	window.app = window.app || {};
-	console.init();
+var app = app || {
+        page : {},
+        components : {}
+    };
+
+require(['jquery', 'componentMgr'], function ($, componentMgr) {
+    console.log('init app');
+    loadNamespace();
+    loadGlobalComponents(componentMgr);
+    loadPageComponents(componentMgr);
 });
+
+function loadNamespace() {
+    var namespace = $('body').data('namespace') || 'unknown';
+    app.page.namespace = namespace;
+    if (namespace == 'unknown') {
+        console.warn("unknown namespace");
+    } else {
+        console.log('namespace ' + namespace);
+    }
+}
+
+function loadComponents(componentMgr, namespace) {
+    var components = componentMgr.getComponents(app.page.namespace) || [],
+        componentsNames = components,
+        initializedComponents = [],
+        duplicatedComponents = [],
+        errorComponents = [];
+
+    app.components[namespace] = components;
+
+    require(componentsNames, function(components) {
+
+        for (var index in arguments) {
+            var component = arguments[index];
+            var componentName = componentsNames[index];
+            if (componentName in initializedComponents) {
+                duplicatedComponents.push(componentName);
+                continue;
+            }
+            try {
+                var componentParam = componentMgr.getComponentParam(namespace);
+                component.init(componentParam);
+                initializedComponents.push(componentName);
+            } catch (e) {
+                // console.error(e);
+                errorComponents.push(componentName);
+            }
+        }
+
+        if (initializedComponents.length > 0) {
+            console.info('initialized [' + namespace + '] components:');
+            console.info(initializedComponents);
+        }
+        if (duplicatedComponents.length > 0) {
+            console.info('duplicated [' + namespace + '] components:');
+            console.info(duplicatedComponents);
+        }
+        if (errorComponents.length > 0) {
+            console.info('error [' + namespace + '] components:');
+            console.info(errorComponents);
+        }
+    });
+}
+
+
+function loadGlobalComponents(componentMgr) {
+    loadComponents(componentMgr, 'global');
+}
+
+function loadPageComponents(componentMgr) {
+    loadComponents(componentMgr, app.page.namespace);
+}

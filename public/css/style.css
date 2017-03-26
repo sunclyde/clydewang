@@ -9,11 +9,20 @@ p {
 	font-size:14px;
 }
 
+a {
+	text-decoration: none;
+	color: #cccccc;
+}
+
 body {
 }
 
 header {
 	background:#1d9d74;
+}
+
+header a {
+	color: white;
 }
 
 header .header {
