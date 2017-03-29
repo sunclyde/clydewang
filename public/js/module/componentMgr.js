@@ -4,9 +4,11 @@ define(function() {
 			'urlconfig' : {}
         },
 		'console-login' : {
+			'console' : {},
 			'console-login' : {}
         },
 		'console-register' : {
+            'console' : {},
             'console-register' : {}
         }
 	};

@@ -1,4 +1,4 @@
-define(function() {
+define(['jquery.validate'], function(validator) {
 
     app = app || {};
 
@@ -11,7 +11,6 @@ define(function() {
     }
 
     function initDOM() {
-
     }
 
     function initEvent() {
@@ -20,11 +19,25 @@ define(function() {
         });
     }
 
+    function initValidator() {
+        cache.form.validate({
+            rules: {
+                login: {
+                    required: true
+                },
+                password: {
+                    required: true
+                }
+            }
+        });
+    }
+
 	return {
 		init : function(param) {
 			initCache();
 			initDOM();
 			initEvent();
+            initValidator();
 		}
     };
 });

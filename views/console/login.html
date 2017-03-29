@@ -1,33 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" href="../css/console.css">
-</head>
-<body data-namespace="console-login">
-	<div class="container">
-		<div class="login-title">
-			<h1>Login</h1>
-		</div>
-		<div class="login-form">
-			<form name="consoleLogin" id="consoleLogin" method="post" action="/console/login">
-				<div class="form-item">
-					<label for="consoleUser">User:</label>
-					<input type="text" name="consoleUser" minlength="8" maxlength="32" required/>
-				</div>
-				<div class="form-item">
-					<label for="consolePassword">Password:</label>
-					<input type="text" name="consolePassword" minlength="8" maxlength="32" required/>
-				</div>
-				<div class="form-item">
-					<a href="console/forget">Forget Password?</a>
-				</div>
-				<div class="form-action">
-					<button class="button register" type="button">Register</button>
-					<button class="button submit" type="submit">Submit</button>
-				</div>
-			</form>
-		</div>
+<% include emptyheader.html %>
+<div class="container">
+	<div class="login-title">
+		<h1>Login</h1>
 	</div>
-	<% include footer.html %>
-</body>
-</html>
+	<div class="login-form">
+		<form name="consoleLogin" id="consoleLogin" method="post" action="/console/login">
+			<div class="form-item">
+				<label class="item-title" for="login">User:</label>
+				<input class="item-value" type="text" name="login" autocomplete="off" />
+			</div>
+			<div class="form-item">
+				<label class="item-title" for="password">Password:</label>
+				<input class="item-value" type="password" name="password" autocomplete="off" />
+			</div>
+			<div class="form-item">
+				<a href="console/forget">Forget Password?</a>
+			</div>
+			<div class="form-message error"><%=page.params.formMessage || ''%></div>
+			<div class="form-action">
+				<button class="button register" type="button">Register</button>
+				<button class="button submit highlight" type="submit">Submit</button>
+			</div>
+		</form>
+	</div>
+</div>
+<% include footer.html %>

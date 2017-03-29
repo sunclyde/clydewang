@@ -1,33 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" href="../css/console.css">
-</head>
-<body data-namespace="console-register">
-	<div class="container">
-		<div class="register-title">
-			<h1>Login</h1>
-		</div>
-		<div class="register-form">
-			<form id="consoleRegister" method="post" action="/console">
-				<div class="form-item">
-					<label for="consoleUser">User:</label>
-					<input type="text" name="consoleUser" />
-				</div>
-				<div class="form-item">
-					<label for="consolePassword">Password:</label>
-					<input type="text" name="consolePassword" />
-				</div>
-				<div class="form-item">
-					<a href="console/forget">Forget Password?</a>
-				</div>
-				<div class="form-action">
-					<button class="button login" type="button">Login</button>
-					<button class="button submit" type="button">Submit</button>
-				</div>
-			</form>
-		</div>
+<% include emptyheader.html %>
+<div class="container">
+	<div class="register-title">
+		<h1>Register</h1>
 	</div>
-	<% include footer.html %>
-</body>
-</html>
+	<div class="register-form">
+		<form id="consoleRegister" method="post" action="/console/register">
+			<div class="form-item">
+				<label class="item-title" for="login">User:</label>
+				<input class="item-value" type="text" id="login" name="login" />
+			</div>
+			<div class="form-item">
+				<label class="item-title" for="password">Password:</label>
+				<input class="item-value" type="password" id="password" name="password" />
+			</div>
+			<div class="form-item">
+				<label class="item-title" for="repeatPassword">Repeat Password:</label>
+				<input class="item-value" type="password" id="repeatPassword" name="repeatPassword" />
+			</div>
+			<div class="form-action">
+				<button class="button login" type="button">Login</button>
+				<button class="button submit highlight" type="submit">Submit</button>
+			</div>
+		</form>
+	</div>
+</div>
+<% include footer.html %>

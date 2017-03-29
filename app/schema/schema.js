@@ -1,8 +1,6 @@
-var mongoose = require('mongoose');
-
-module.export = {
+module.exports = {
 	user : {
 		login : { type : String },
-		password : { type : Number }
+		password : { type : String }
 	}
 }
