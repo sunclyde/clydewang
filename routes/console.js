@@ -11,7 +11,6 @@ router.get('/', function (req, res, next) {
         res.render('console/console', {page : page});
     } else {
         page.ns = 'console-login';
-        page.params.formMessage = 'console';
         res.render('console/login', {page : page});
     }
 });
