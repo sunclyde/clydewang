@@ -39,3 +39,4 @@ jspm_packages
 #custom
 node_modules/*.**
 *.bak
+.idea/workspace.xml
