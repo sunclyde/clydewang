@@ -1,12 +1,15 @@
 require.config({
     paths: {
         'jquery' :              'lib/jquery-3.1.1.min',
-        'jquery-validate' :     'lib/jquery-validate.min',
+        'jquery.validate' :     'lib/jquery.validate.min',
         'componentMgr' :        'module/componentMgr',
         'urlconfig' :           'app/config/urlconfig',
         'console' :             'app/console/console',
         'console-login' :       'app/console/console-login',
         'console-register' :    'app/console/console-register'
+    },
+    shim: {
+        'jquery.validate': ['jquery']
     }
 });
 
@@ -21,6 +24,22 @@ require(['jquery', 'componentMgr'], function ($, componentMgr) {
     loadGlobalComponents(componentMgr);
     loadPageComponents(componentMgr);
 });
+
+function empty(object) {
+    if (typeof object == 'undefined') {
+        return true;
+    }
+    if (object == null) {
+        return true;
+    }
+    if (typeof object == 'string' && object.length == 0) {
+        return true;
+    }
+    if (object instanceof Array && object.length == 0) {
+        return true;
+    }
+    return false;
+}
 
 function loadNamespace() {
     var namespace = $('body').data('namespace') || 'unknown';
