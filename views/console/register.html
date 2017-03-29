@@ -1,0 +1,27 @@
+<% include emptyheader.html %>
+<div class="container">
+	<div class="register-title">
+		<h1>Register</h1>
+	</div>
+	<div class="register-form">
+		<form id="consoleRegister" method="post" action="/console/register">
+			<div class="form-item">
+				<label class="item-title" for="login">User:</label>
+				<input class="item-value" type="text" id="login" name="login" />
+			</div>
+			<div class="form-item">
+				<label class="item-title" for="password">Password:</label>
+				<input class="item-value" type="password" id="password" name="password" />
+			</div>
+			<div class="form-item">
+				<label class="item-title" for="repeatPassword">Repeat Password:</label>
+				<input class="item-value" type="password" id="repeatPassword" name="repeatPassword" />
+			</div>
+			<div class="form-action">
+				<button class="button login" type="button">Login</button>
+				<button class="button submit highlight" type="submit">Submit</button>
+			</div>
+		</form>
+	</div>
+</div>
+<% include footer.html %>
