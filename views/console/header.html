@@ -3,4 +3,27 @@
 <head>
 	<link rel="stylesheet" href="../css/console.css">
 </head>
-<body data-namespace="<%=page%>">
+<body data-namespace="<%=page.ns%>">
+	<header>
+		<div class="header">
+			<div class="header-logo">
+				<h1><a href="/console">Console</a></h1>
+			</div>
+			<div class="header-menu">
+				<span>Menu</span>
+				<ul>
+					<li class="menu-item">1</li>
+				</ul>
+			</div>
+			<div class="header-menu">
+				<span>Data Model</span>
+				<ul>
+					<li class="menu-item"><a href="/console/datatable">Data table</a></li>
+					<li class="menu-item"><a href="/console/preference">Preference</a></li>
+				</ul>
+			</div>
+			<div class="header-logout">
+				<span>Welcome: <%=page.params.username%>, <a href="/console/logout">Logout</a>?</span>
+			</div>
+		</div>
+	</header>
