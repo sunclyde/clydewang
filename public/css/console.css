@@ -1,12 +1,14 @@
 @import "font.css";
+@import "console-header.css";
+@import "console-content.css";
 
 * {
     font-family: proxima-nova, "HelveticaNeue", Helvetica, Arial, sans-serif;
-    margin: 0 auto;
+    margin: 0;
 }
 
 body {
-    background: #000;
+    background: #333;
     color: white;
 }
 
@@ -33,7 +35,7 @@ p {
 }
 
 .error {
-    color: deeppink;
+    color: hotpink;
 }
 
 label.error {
@@ -71,13 +73,13 @@ label.error {
     margin: 10px;
     width: 85px;
     border: 1px solid #999;
-    background: black;
+    background: #333;
     color: white;
 }
 
 .form-action button.highlight {
-    border: 1px solid deeppink;
-    background: deeppink;
+    border: 1px solid hotpink;
+    background: hotpink;
     color: white;
     font-weight: bold;
 }
@@ -100,4 +102,30 @@ label.error {
     padding-bottom: 10px;
     text-align: center;
     border-bottom: 1px solid gray;
+}
+
+.welcome {
+    width: 300px;
+    height: 300px;
+    line-height: 300px;
+    text-align: center;
+    color: hotpink;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.page-ns-error .container {
+    text-align: center;
+}
+.page-ns-error h1 {
+    line-height: 180px;
+    font-size: 32px;
+    color: hotpink;
+}
+.page-ns-error a {
+    line-height: 100px;
 }

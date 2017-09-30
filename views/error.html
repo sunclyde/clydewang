@@ -1,2 +1,7 @@
-<h1>Error page</h1>
-<div>You've encounter an error, please contact to admin</div>
+<% include console/emptyheader.html %>
+<div class="container">
+    <h1><%=status%></h1>
+    <div>Ah oh, something went wrong here:<br /> <%=message%></div>
+    <div><a href="/console">Back home</a></div>
+</div>
+<% include console/footer.html %>

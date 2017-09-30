@@ -1,0 +1,22 @@
+.content {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.content .page-title {
+    font-size: 20px;
+    height: 30px;
+    color: greenyellow;
+}
+
+.content .sub-title {
+    color: #ccc;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px double #666;
+    margin-bottom: 10px;
+}
+
+.content .sub-title:before {
+    content: '> ';
+}

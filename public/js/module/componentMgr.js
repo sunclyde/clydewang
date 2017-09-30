@@ -3,13 +3,19 @@ define(function() {
 		'global' : {
 			'urlconfig' : {}
         },
-		'console-login' : {
-			'console' : {},
-			'console-login' : {}
+        'console' : {
+            'console' : {}
+        },
+        'console-login' : {
+            'console' : {},
+            'console-login' : {}
         },
 		'console-register' : {
             'console' : {},
             'console-register' : {}
+        },
+        'datatable' : {
+            'console' : {}
         }
 	};
 
