@@ -41,48 +41,4 @@ connect();
 
 module.exports = {
 	mongoose : mongoose
-	// create : function (object, table, schema) {
-	// 	try {
-	// 		var db = connect();
-	// 		logger.info('object', object);
-	// 		logger.info('table', table);
-	// 		logger.info('schema', schema);
-	// 		var model = db.model(table, schema);
-	// 		logger.info('data');
-	// 		var data = new model(object);
-	// 		logger.info('save');
-	// 		data.save(function(err){
-	// 			if (err) {
-	// 				logger.error(err);
-	// 			} else {
-	// 				logger.info('data inserted');
-	// 			}
-	// 			db.close();
-	// 		});
-	// 	} catch (e) {
-	// 		logger.error('error: ' + e);
-	// 	}
-	// },
-	// find : function (object, table, schema, callback) {
-	// 	var result = {};
-     //    try {
-     //        var db = connect();
-     //        logger.info('object', object);
-     //        logger.info('table', table);
-     //        logger.info('schema', schema);
-     //        var model = db.model(table, schema);
-     //        logger.info('query');
-     //        result = model.find(object, function(err, doc) {
-     //            if (err) {
-     //                logger.error(err);
-     //            } else {
-     //                logger.info('data queried');
-     //                logger.info('result: ' + result);
-     //            }
-     //            db.close();
-	// 		});
-     //    } catch (e) {
-     //        logger.error('error: ' + e);
-     //    }
-	// }
 }

@@ -3,7 +3,17 @@
     <div class="page-title">Data table</div>
     <div class="sub-title">You could create, remove, update and query all data tables in database here.</div>
     <div class="primary">
-        123
+        <div class="form-action">
+            <% if (page.params.result) { %>  
+            <ul>
+            <% page.params.result.forEach(function(row){ %>
+                <li foo='<%= row + "'" %>'><%= row %></li>
+            <% }) %>
+            </ul>
+            <% } %>
+            <button class="new_table">New</button>
+            <button class="delete_table">Delete</button>
+        </div>
     </div>
 </div>
 <% include footer.html %>

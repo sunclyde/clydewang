@@ -125,23 +125,50 @@ router.post('/register', function (req, res, next) {
 router.get('/datatable', function (req, res, next) {
     page = new Page();
     page.ns = 'datatable';
-
-    PreferenceMgr.PreferenceGroupModel.find({}, function (err, result) {
-        if (result != null) {
-            page.params['tables'] = result;
-        } else {
-            page.params['tables'] = [];
-        }
-        res.render('console/datatable', {page: page});
-    });
-
+    
+    res.render('console/datatable', {page: page});
 });
 
 /* GET preference */
 router.get('/preference', function (req, res, next) {
     page = new Page();
     page.ns = 'preference';
-    res.render('console/preference', {page: page});
+
+    PreferenceMgr.PreferenceGroupModel.find({}, function (err, result) {
+        if (result != null) {
+            page.params['groups'] = result;
+        } else {
+            page.params['groups'] = [];
+        }
+        res.render('console/preference', {page: page});
+    });
+});
+
+/* GET new preference group */
+router.get('/newgroup', function (req, res, next) {
+    page = new Page();
+    page.ns = 'preference';
+    
+    res.render('console/preference/newgroup', {page: page});
+});
+
+/* POST new preference group */
+router.post('/newgroup', function (req, res, next) {
+    page = new Page();
+    page.ns = 'preference';
+    var PreferenceGroupModel = PreferenceMgr.PreferenceGroupModel;
+    var group = new PreferenceGroupModel(req.body);
+    group.save(function (err) {
+        if (err) {
+            // tell error
+            console.error('error to add preference group: ' + err);
+        } else {
+            // tell success
+            console.log('success to add preference group');
+        }
+        res.writeHead(302, {'Location': '/console/preference'});
+        res.end();
+    });
 });
 
 /* common functions */

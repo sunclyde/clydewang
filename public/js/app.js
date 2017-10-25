@@ -6,7 +6,8 @@ require.config({
         'urlconfig' :           'app/config/urlconfig',
         'console' :             'app/console/console',
         'console-login' :       'app/console/console-login',
-        'console-register' :    'app/console/console-register'
+        'console-register' :    'app/console/console-register',
+        'console-preference' :  'app/console/console-preference'
     },
     shim: {
         'jquery.validate': ['jquery']
