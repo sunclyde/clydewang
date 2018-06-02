@@ -6,7 +6,7 @@ define(['jquery', 'jquery.validate'], function ($) {
         form: $('#newGroup'),
         cancelBtn: $('.form-action .button.cancel'),
         newGroupBtn: $('.form-action .button.newGroup'),
-        deleteGroupBtn: $('.form-action .button.deleteGroup')
+        preferenceGroup: $('li.preferenceGroup')
     };
 
     function initCache() {
@@ -16,11 +16,19 @@ define(['jquery', 'jquery.validate'], function ($) {
     }
 
     function initEvent() {
-        cache.cancelBtn.on('click', function () {
+        cache.cancelBtn.on('click', function (e) {
             window.location = app.urls.console.preference;
         });
-        cache.newGroupBtn.on('click', function () {
+        cache.newGroupBtn.on('click', function (e) {
             window.location = app.urls.console.newGroup;
+        });
+        cache.preferenceGroup.on('click', '.table-action.edit', function(e) {
+            var groupId = $(this).parent().data('id');
+            console.log('clicked edit group ' + groupId);
+        });
+        cache.preferenceGroup.on('click', '.table-action.remove', function(e) {
+            var groupId = $(this).parent().data('id');
+            console.log('clicked remove group ' + groupId);
         });
     }
 

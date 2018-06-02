@@ -7,11 +7,11 @@
             <% if (page.params.groups) { %>  
             <ul>
             <% page.params.groups.forEach(function(group){ %>
-                <li foo='<%= group.preferenceGroupId + "'" %>'>
+                <li class="preferenceGroup" data-id='<%= group.preferenceGroupId %>'>
                     <span class="table-title"><%= group.preferenceGroupName %></span>
                     <span class="table-text">(ID: <%=group.preferenceGroupId%>, Contains <%=group.attributes.length%> attributes)</span>
-                    <span class="table-action">Edit</span>
-                    <span class="table-action">Remove</span>
+                    <span class="table-action edit">Edit</span>
+                    <span class="table-action remove">Remove</span>
                 </li>
             <% }) %>
             </ul>

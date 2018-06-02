@@ -171,6 +171,26 @@ router.post('/newgroup', function (req, res, next) {
     });
 });
 
+/* POST remove preference group */
+router.delete('/removegroup', function (req, res, next) {
+    page = new Page();
+    page.ns = 'preference';
+    var PreferenceGroupModel = PreferenceMgr.PreferenceGroupModel;
+    var group = new PreferenceGroupModel(req.body);
+    group.remove(function (err) {
+        if (err) {
+            // tell error
+            console.error('error to remove preference group: ' + err);
+        } else {
+            // tell success
+            console.log('success to remove preference group');
+        }
+        res.writeHead(302, {'Location': '/console/preference'});
+        res.end();
+    });
+
+});
+
 /* common functions */
 function initSession(req) {
     req.session.type = "console";
