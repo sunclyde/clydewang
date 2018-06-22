@@ -1,0 +1,24 @@
+<% include ../header.html %>
+<div class="content">
+    <div class="page-title">New preference group</div>
+    <div class="sub-title">New preference group.</div>
+    <div class="primary">
+        <div class="group-form">
+            <form id="newGroup" method="post" action="/console/newgroup">
+                <div class="form-item">
+                    <label class="item-title" for="preferenceGroupId">Preference Group ID:</label>
+                    <input class="item-value" type="text" id="preferenceGroupId" name="preferenceGroupId" />
+                </div>
+                <div class="form-item">
+                    <label class="item-title" for="preferenceGroupName">Preference Group Name:</label>
+                    <input class="item-value" type="text" id="preferenceGroupName" name="preferenceGroupName" />
+                </div>
+                <div class="form-action">
+                    <button class="button cancel" type="button">Cancel</button>
+                    <button class="button submit highlight" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<% include ../footer.html %>
