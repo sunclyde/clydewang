@@ -39,14 +39,9 @@ router.use(function (req, res, next) {
             if (!inPath) {
                 err = new Error('Not authenticated');
                 err.status = 401;
-                next(err);
-            } else {
-                next();
             }
-        } else {
-            console.log('authenticated');
-            next();
         }
+        next(err);
     } catch (e) {
         console.log(e);
     }

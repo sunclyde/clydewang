@@ -3,7 +3,23 @@
     <div class="page-title">Data table</div>
     <div class="sub-title">You could create, remove, update and query all data tables in database here.</div>
     <div class="primary">
-        123
+        <% if (page.params.tables.length > 0) { %>
+        <table>
+            <thead>
+                <th>1</th>
+            </thead>
+            <tbody>
+                <td>2</td>
+            </tbody>
+        </table>
+        <% } else { %>
+        <div class="empty-datatable">No data table found, please create one.</div>
+        <% }%>
+        <div class="datatable-action">
+            <button class="button datatable-new" type="button">New</button>
+            <button class="button datatable-delete" type="button">Delete</button>
+            <button class="button datatable-refresh" type="button">Refresh</button>
+        </div>
     </div>
 </div>
 <% include footer.html %>
