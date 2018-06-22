@@ -10,6 +10,7 @@ var ejs = require('ejs');
 var routes = require('./routes/index');
 var console = require('./routes/console');
 var users = require('./routes/users');
+var api = require('./routes/api');
 
 var app = express();
 var Page = require('./app/core/Page');

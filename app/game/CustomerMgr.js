@@ -1,4 +1,4 @@
-var DBMgr = require('./DBMgr'),
+var DBMgr = require('../core/DBMgr'),
 	mongoose = DBMgr.mongoose,
 	Schema = mongoose.Schema,
 	customerSchema = new Schema(require('../schema/schema').customer),
