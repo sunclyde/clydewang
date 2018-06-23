@@ -87,13 +87,6 @@ button.button:hover {
     color: hotpink;
 }
 
-button.button.highlight {
-    .form-action button:hover {
-        border: 1px solid #fff;
-        background: #fff;
-        color: #000;
-    }
-
 .form-action button.highlight {
     border: 1px solid hotpink;
     background: hotpink;
@@ -124,7 +117,7 @@ button.button.highlight {
 }
 
 .table-action:before {
-    content: '> '
+    content: '> ';
 }
 
 .container {
