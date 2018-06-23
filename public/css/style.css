@@ -3,6 +3,7 @@
 @import "header.css";
 @import "footer.css";
 @import "menu.css";
+@import "icons.css";
 
 * {
 	font-family:proxima-nova,"HelveticaNeue",Helvetica,Arial,sans-serif;
