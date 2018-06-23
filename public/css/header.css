@@ -1,0 +1,63 @@
+header {
+	background:#1d9d74;
+}
+
+header a {
+	color: white;
+}
+
+header .header {
+	height:3rem;
+	margin:auto;
+	color:white;
+}
+
+header .header-menu {
+	display: inline-block;
+	font-size: 0;
+}
+
+header .header-menu img {
+	width: 3rem;
+	height: 3rem;
+	filter: invert(100%);
+}
+
+header .header-logo {
+	display: inline-block;
+	width: calc(100% - 6rem);
+	vertical-align: top;
+    text-align: center;
+}
+
+header .header-rightplaceholder {
+	display: inline-block;
+	width: 3rem;
+	height: 3rem;
+}
+
+header h1 {
+	font-family:museo-slab,Georgia,"Times New Roman",Times,serif;
+	font-size: 2.3rem;
+	text-shadow: 4px 3px 0 #1d9d74, 9px 8px 0 rgba(0,0,0,0.15);
+}
+
+
+/*
+
+header .header {
+	max-width:960px;
+	height:100px;
+	margin:auto;
+	color:white;
+}
+
+header .header-left {
+	float: left;
+}
+
+header .header-right {
+	float: right;
+	padding-top:10px;
+}
+*/

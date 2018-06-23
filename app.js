@@ -7,10 +7,12 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var ejs = require('ejs');
 
+// load routers
 var routes = require('./routes/index');
 var console = require('./routes/console');
 var users = require('./routes/users');
 var api = require('./routes/api');
+var game = require('./routes/game');
 
 var app = express();
 var Page = require('./app/core/Page');
@@ -46,6 +48,7 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/console', console);
 app.use('/api', api);
+app.use('/game', game);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
