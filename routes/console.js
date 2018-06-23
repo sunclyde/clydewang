@@ -4,6 +4,7 @@ var util = require('../app/util/util');
 var Page = require('../app/core/Page');
 var UserMgr = require('../app/core/UserMgr');
 var PreferenceMgr = require('../app/core/PreferenceMgr');
+
 var page = new Page();
 
 /* filter */
