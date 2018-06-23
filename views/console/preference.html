@@ -1,0 +1,25 @@
+<% include header.html %>
+<div class="content">
+    <div class="page-title">Preference group</div>
+    <div class="sub-title">You could create, remove, update and query all preference group here.</div>
+    <div class="primary">
+        <div class="preferenceList">
+            <% if (page.params.groups) { %>  
+            <ul>
+            <% page.params.groups.forEach(function(group){ %>
+                <li class="preferenceGroup" data-id='<%= group.preferenceGroupId %>'>
+                    <span class="table-title"><%= group.preferenceGroupName %></span>
+                    <span class="table-text">(ID: <%=group.preferenceGroupId%>, Contains <%=group.attributes.length%> attributes)</span>
+                    <span class="table-action edit">Edit</span>
+                    <span class="table-action remove">Remove</span>
+                </li>
+            <% }) %>
+            </ul>
+            <% } %>
+        </div>
+        <div class="form-action">
+            <button class="button newGroup">New Group</button>
+        </div>
+    </div>
+</div>
+<% include footer.html %>

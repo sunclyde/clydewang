@@ -1,6 +1,7 @@
 @import "font.css";
 @import "console-header.css";
 @import "console-content.css";
+@import "console-datatable.css";
 
 * {
     font-family: proxima-nova, "HelveticaNeue", Helvetica, Arial, sans-serif;
@@ -68,20 +69,62 @@ label.error {
     width: 100%;
 }
 
-.form-action button {
+input, button {
+    outline: 0;
+}
+
+button.button {
     padding: 4px;
     margin: 10px;
     width: 85px;
     border: 1px solid #999;
     background: #333;
     color: white;
+    cursor: pointer;
 }
+
+button.button:hover {
+    color: hotpink;
+}
+
+button.button.highlight {
+    .form-action button:hover {
+        border: 1px solid #fff;
+        background: #fff;
+        color: #000;
+    }
 
 .form-action button.highlight {
     border: 1px solid hotpink;
     background: hotpink;
     color: white;
     font-weight: bold;
+}
+
+.form-action button.highlight:hover {
+    background: white;
+    color: hotpink;
+}
+
+.table-title {
+    color: greenyellow;
+    font-size: 18px;
+}
+
+.table-text {
+    color: #eee;
+    font-size: 14px;
+}
+
+.table-action {
+    color: hotpink;
+    font-size: 14px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.table-action:before {
+    content: '> '
 }
 
 .container {
@@ -121,11 +164,13 @@ label.error {
 .page-ns-error .container {
     text-align: center;
 }
+
 .page-ns-error h1 {
     line-height: 180px;
     font-size: 32px;
     color: hotpink;
 }
+
 .page-ns-error a {
     line-height: 100px;
 }

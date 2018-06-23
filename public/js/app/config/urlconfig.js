@@ -10,7 +10,9 @@ define(function() {
             /* console url configs */
             console : {
                 login : '/console/login',
-                register : '/console/register'
+                register : '/console/register',
+                preference : '/console/preference',
+                newGroup : '/console/newgroup'
             }
         };
     }
