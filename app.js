@@ -13,6 +13,7 @@ var console = require('./routes/console');
 var users = require('./routes/users');
 var api = require('./routes/api');
 var game = require('./routes/game');
+var simple = require('./routes/simple');
 
 var app = express();
 var Page = require('./app/core/Page');
@@ -49,6 +50,7 @@ app.use('/users', users);
 app.use('/console', console);
 app.use('/api', api);
 app.use('/game', game);
+app.use('/simple', simple)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
