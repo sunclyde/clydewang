@@ -390,6 +390,7 @@ LAppModel.prototype.setFadeInFadeOut = function(name, no, priority, motion)
         if (LAppDefine.DEBUG_LOG)
             console.log("Start sound : " + soundName);
         
+        snd.load();
         snd.play();
         this.mainMotionManager.startMotionPrio(motion, priority);
     }
