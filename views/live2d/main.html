@@ -18,7 +18,7 @@
         */
         background-size: 150%;
         background-position: 50% 50%;
-        background-image: url(assets/image/back_class_normal.png);
+        /*background-image: url(assets/image/back_class_normal.png);*/
     }
     
     button {
@@ -80,13 +80,13 @@
     <button id="btnChange" class="active">Change Model</button>
 </p>
 
-<div style="text-align: center;">
+<div style="width:100%">
     <canvas id="glcanvas" width="680" height="940" 
-        style="border:dashed 1px #CCC;width:340px;height:470px;margin:auto;">
+        style="position:absolute;width: 100%;bottom: 0;">
     </canvas>
 </div>
 
-<div id="myconsole" style="color:#000">---- Log ----</div>
+<div id="myconsole" style="color:#000;display:none;">---- Log ----</div>
 
 <!-- Live2D Library -->
 <script src="../js/lib/live2d.min.js"></script>
