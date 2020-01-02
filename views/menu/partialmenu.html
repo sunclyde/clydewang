@@ -5,7 +5,12 @@
         if (item.enabled != false) {
 %>
     <li class="icon">
-        <a class="icon" href="<%=item.href ? item.href : '#'%>" target="<%=item.target ? item.target : "_self"%>"><%=item.id%><%=item.child ? " >>" : ""%></a> 
+        <a class="icon <%=item.class%>" 
+            href="<%=item.href ? item.href : '#'%>" 
+            target="<%=item.target ? item.target : "_self"%>"
+            data="<%=JSON.stringify(item.data)%>">
+            <%=item.id%><%=item.child ? " >>" : ""%>
+        </a> 
         <%
             if (item.child) {
         %>

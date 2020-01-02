@@ -3,6 +3,7 @@ require.config({
         'jquery' :              'lib/jquery-3.1.1.min',
         'jquery.validate' :     'lib/jquery.validate.min',
         'componentMgr' :        'module/componentMgr',
+        'theme' :               'app/config/theme',
         'urlconfig' :           'app/config/urlconfig',
         'console' :             'app/console/console',
         'console-login' :       'app/console/console-login',

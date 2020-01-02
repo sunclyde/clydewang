@@ -8,7 +8,18 @@
         "child": [
             {
                 "id": "Character",
-                "href": "/game/character"
+                "href": "/game/character",
+                "child": [
+                    {
+                        "id": "Char 1"
+                    },
+                    {
+                        "id": "Char 2"
+                    },
+                    {
+                        "id": "Char 3"
+                    }
+                ]
             },
             {
                 "id": "Inventory",
@@ -40,6 +51,32 @@
                 "id": "Console",
                 "href": "/console",
                 "target": "_blank"
+            },
+            {
+                "id": "Theme",
+                "child": [
+                    {
+                        "id": "Default",
+                        "class": "switch-theme",
+                        "data": {
+                            "theme": "default"
+                        }
+                    },
+                    {
+                        "id": "Sky",
+                        "class": "switch-theme",
+                        "data": {
+                            "theme": "sky"
+                        }
+                    },
+                    {
+                        "id": "Bloody",
+                        "class": "switch-theme",
+                        "data": {
+                            "theme": "bloody"
+                        }
+                    }
+                ]
             },
             {
                 "id": "Refresh Menu",

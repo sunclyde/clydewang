@@ -1,0 +1,52 @@
+@import './themes/_themeify';
+
+header {
+    @include themeify {
+        background: themed('color-header-bg');
+    }
+    
+    a {
+        @include themeify {
+            color: themed('color-header-a');
+        }
+    }
+
+    h1, h1 a {
+        font-family:museo-slab,Georgia,"Times New Roman",Times,serif;
+        font-size: 2.3rem;
+        @include themeify {
+            text-shadow: 4px 3px 0 themed('color-header-bg'), 9px 8px 0 rgba(0,0,0,0.15);
+        }        
+    }
+
+    // header bar
+    .header {
+        height:3rem;
+        margin:auto;
+        color:white;
+    }
+
+    .header-menu {
+        display: inline-block;
+        font-size: 0;
+
+        img {
+            width: 3rem;
+            height: 3rem;
+            filter: invert(100%);
+        }
+    }
+
+    .header-logo {
+        display: inline-block;
+        width: calc(100% - 6rem);
+        vertical-align: top;
+        text-align: center;
+    }
+    
+    .header-rightplaceholder {
+        display: inline-block;
+        width: 3rem;
+        height: 3rem;
+    }
+}

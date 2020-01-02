@@ -1,7 +1,8 @@
 define(function() {
     var config = {
         'global': {
-            'urlconfig': {}
+            'urlconfig': {},
+            'theme': {}
         },
         'general': {
 
