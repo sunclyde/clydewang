@@ -16,13 +16,13 @@
         "id": "Tools",
         "child": [
             {
-                "id": "Refresh Menu",
-                "href": "/reload?item=menu",
+                "id": "Console",
+                "href": "/console",
                 "target": "_blank"
             },
             {
-                "id": "Console",
-                "href": "/console",
+                "id": "Refresh Menu",
+                "href": "/reload?item=menu",
                 "target": "_blank"
             }
         ]
