@@ -1,0 +1,30 @@
+[
+    {
+        "id": "Character"
+    },
+    {
+        "id": "Inventory"
+    },
+    {
+        "id": "Skill"
+    },
+    {
+        "id": "Test",
+        "enabled": false
+    },
+    {
+        "id": "Tools",
+        "child": [
+            {
+                "id": "Refresh Menu",
+                "href": "/reload?item=menu",
+                "target": "_blank"
+            },
+            {
+                "id": "Console",
+                "href": "/console",
+                "target": "_blank"
+            }
+        ]
+    }
+]

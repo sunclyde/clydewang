@@ -1,4 +1,4 @@
-var Page = function(){};
+var Page = function() {};
 
 Page.prototype.ns = 'unknown';
 Page.prototype.params = [];

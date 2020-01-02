@@ -1,0 +1,26 @@
+<a class="mp-back" href="#">back</a>
+<ul>
+<%
+    list.forEach(function(item){
+        if (item.enabled != false) {
+%>
+    <li class="icon">
+        <a class="icon" href="<%=item.href ? item.href : '#'%>" target="<%=item.target ? item.target : "_self"%>"><%=item.id%><%=item.child ? " >>" : ""%></a> 
+        <%
+            if (item.child) {
+        %>
+        <div class="mp-level">
+            <h2 class="icon">
+                <%=item.id%>
+            </h2>
+            <%- include("partialmenu.html", {"list": item.child});%>                
+        </div>
+    </li>
+    <%
+        }
+    %>        
+<%
+        }
+    });
+%>
+</ul>

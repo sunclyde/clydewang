@@ -1,33 +1,36 @@
 define(function() {
     var config = {
-        'global' : {
-            'urlconfig' : {}
+        'global': {
+            'urlconfig': {}
         },
-        'console' : {
-            'console' : {}
+        'general': {
+
         },
-        'console-login' : {
-            'console' : {},
-            'console-login' : {}
+        'console': {
+            'console': {}
         },
-        'console-register' : {
-            'console' : {},
-            'console-register' : {}
+        'console-login': {
+            'console': {},
+            'console-login': {}
         },
-        'datatable' : {
-            'console' : {}
+        'console-register': {
+            'console': {},
+            'console-register': {}
         },
-        'preference' : {
-            'console' : {},
-            'console-preference' : {}
+        'datatable': {
+            'console': {}
+        },
+        'preference': {
+            'console': {},
+            'console-preference': {}
         }
     };
 
-    var getGlobalComponents = function () {
+    var getGlobalComponents = function() {
         return getComponents('global');
     };
 
-    var getComponents = function (namespace) {
+    var getComponents = function(namespace) {
         var components = [];
         if (config && namespace in config && config[namespace]) {
             var currentPageComponents = config[namespace];
@@ -40,20 +43,20 @@ define(function() {
         return components;
     };
 
-    var getComponentParam = function (namespace, componentName) {
+    var getComponentParam = function(namespace, componentName) {
         var param = {};
         if (config && namespace && componentName &&
-                namespace in config && config[namespace] &&
-                componentName in config[namespace] && config[namespace][componentName]) {
+            namespace in config && config[namespace] &&
+            componentName in config[namespace] && config[namespace][componentName]) {
             param = config[namespace][componentName];
         }
         return param;
     };
 
     return {
-        config : config,
-        getComponents : getComponents,
-        getGlobalComponents : getGlobalComponents,
-        getComponentParam : getComponentParam
+        config: config,
+        getComponents: getComponents,
+        getGlobalComponents: getGlobalComponents,
+        getComponentParam: getComponentParam
     };
 });

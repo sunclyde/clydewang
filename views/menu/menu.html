@@ -1,49 +1,9 @@
 <!-- mp-menu -->
 <nav id="mp-menu" class="mp-menu">
-	<div class="mp-level">
-		<h2 class="icon">Menu</h2>
-		<a class="mp-back" href="#">back</a>
-		<ul>
-			<li class="icon">
-				<a class="icon" href="#">Character +</a>
-				
-				<div class="mp-level">
-					<h2 class="icon">Character</h2>
-					<ul>
-						<li class="icon">
-							<a class="icon" href="#">Status</a>
-						</li>
-					</ul>
-				</div>
-			</li>
-			<li class="icon">
-				<a class="icon" href="#">Inventory</a>
-			</li>
-			<li class="icon">
-				<a class="icon" href="#">Skill +</a>
-
-				<div class="mp-level">
-					<h2 class="icon">Skill</h2>
-					<ul>
-						<li class="icon">
-							<a class="icon" href="#">Combat</a>
-						</li>
-						<li class="icon">
-							<a class="icon" href="#">Spell</a>
-						</li>
-						<li class="icon">
-							<a class="icon" href="#">Ninja</a>
-						</li>
-						<li class="icon">
-							<a class="icon" href="#">Other</a>
-						</li>
-					</ul>
-				</div>
-			</li>
-			<li class="icon">
-				<a class="icon" href="console">Console</a>
-			</li>
-		</ul>
-	</div>
+    <div class="mp-level">
+        <h2 class="icon">Menu</h2>             
+        <%- include("menu/partialmenu.html", {"list": menu});%>
+    </div>
 </nav>
 <!-- /mp-menu -->
+<%//partial("testpartial.html", {"list": item.list});%>

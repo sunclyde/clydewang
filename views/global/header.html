@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
-	<link rel="stylesheet" href="../css/style.css">
-	<script src="js/lib/modernizr.custom.js"></script>
+    <title>
+        <%=page.title%>
+    </title>
+    <meta name="description" content="<%=page.description%>" />
+    <meta name="keywords" content="<%=page.keywords%>" />
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="js/lib/modernizr.custom.js"></script>
 </head>
-<body>
-	<div class="container">
-		<!-- Push Wrapper -->
-		<div class="mp-pusher" id="mp-pusher">
-			<% include ../menu/menu.html %>
-			<header>
-				<div class="header">
-					<div class="header-menu" id="trigger">
-						<img src="image/menu/menu2.png" >
-					</div>
-					<div class="header-logo">
-						<h1>Magic Card</h1>
-					</div>
-					<div class="header-rightplaceholder"></div>
-				</div>
-			</header>
+
+<body data-namespace="<%=page.ns%>">
+    <div class="container">
+        <!-- Push Wrapper -->
+        <div class="mp-pusher" id="mp-pusher">
+            <% include ../menu/menu.html %>
+                <header>
+                    <div class="header">
+                        <div class="header-menu" id="trigger">
+                            <img src="image/menu/menu2.png">
+                        </div>
+                        <div class="header-logo">
+                            <h1>
+                                <%=page.headLogo%>
+                            </h1>
+                        </div>
+                        <div class="header-rightplaceholder"></div>
+                    </div>
+                </header>
