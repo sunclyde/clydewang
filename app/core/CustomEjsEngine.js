@@ -17,6 +17,7 @@ module.exports = {
 
         // load default menu
         payload.menu = payload.menu || menu;
+        payload.menupartialview = appRoot + '/views/menu/partialmenu.html';
 
         // renderer
         ejs.renderFile(filename, payload, {}, callback);

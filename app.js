@@ -6,13 +6,6 @@ var session = require('express-session');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-// load routers
-var routes = require('./routes/index');
-var console = require('./routes/console');
-var users = require('./routes/users');
-var api = require('./routes/api');
-var game = require('./routes/game');
-
 var app = express();
 var Page = require('./app/core/Page');
 var page = new Page();
@@ -22,6 +15,7 @@ var page = new Page();
 var customEjs = require('./app/core/CustomEjsEngine');
 
 // view engine setup
+global.appRoot = path.resolve(__dirname);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('.html', customEjs.engine);
 app.set('view engine', 'html');
@@ -47,12 +41,19 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// load routers
+var routes = require('./routes/index');
+var console = require('./routes/console');
+var users = require('./routes/users');
+var api = require('./routes/api');
+var game = require('./routes/game');
+var library = require('./routes/library');
 app.use('/', routes);
 app.use('/users', users);
 app.use('/console', console);
 app.use('/api', api);
 app.use('/game', game);
-
+app.use('/library', library);
 app.get('/reload', function(req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;

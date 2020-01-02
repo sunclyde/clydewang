@@ -1,8 +1,9 @@
 <!-- mp-menu -->
 <nav id="mp-menu" class="mp-menu">
     <div class="mp-level">
-        <h2 class="icon">Menu</h2>             
-        <%- include("menu/partialmenu.html", {"list": menu});%>
+        <h2 class="icon">Menu</h2>           
+        <%//=menupartialview%>  
+        <%- include(menupartialview, {"list": menu, "template" : menupartialview});%>
     </div>
 </nav>
 <!-- /mp-menu -->

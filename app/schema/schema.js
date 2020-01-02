@@ -6,6 +6,15 @@ module.exports = {
         password : { type : String },
         email : { type : String },
     },
+    /* game */
+    card: {
+        cardId : { type : String },
+        rare : { type : String },
+        type : { type : String },
+        name : { type : String },
+        content : { type : String },
+        script : { type : String },
+    },
     /* backend */
     user : {
         login : { type : String },

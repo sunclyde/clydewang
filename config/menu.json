@@ -1,12 +1,33 @@
 [
     {
-        "id": "Character"
+        "id": "Home",
+        "href": "/"
     },
     {
-        "id": "Inventory"
+        "id": "Game",
+        "child": [
+            {
+                "id": "Character",
+                "href": "/game/character"
+            },
+            {
+                "id": "Inventory",
+                "href": "/game/inventory"
+            },
+            {
+                "id": "Skill",
+                "href": "/game/skill"
+            }
+        ]
     },
     {
-        "id": "Skill"
+        "id": "Library",
+        "child": [
+            {
+                "id": "Card Library",
+                "href": "/library/card"
+            }
+        ]
     },
     {
         "id": "Test",
