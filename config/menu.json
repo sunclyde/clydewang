@@ -48,39 +48,50 @@
         "id": "Tools",
         "child": [
             {
-                "id": "Console",
-                "href": "/console",
-                "target": "_blank"
-            },
-            {
                 "id": "Theme",
                 "child": [
                     {
                         "id": "Default",
                         "class": "switch-theme",
-                        "data": {
-                            "theme": "default"
-                        }
+                        "data": [{
+                            "key": "theme",
+                            "value": "default"
+                        }]
                     },
                     {
                         "id": "Sky",
                         "class": "switch-theme",
-                        "data": {
-                            "theme": "sky"
-                        }
+                        "data": [{
+                            "key": "theme",
+                            "value": "sky"
+                        }]
                     },
                     {
                         "id": "Bloody",
                         "class": "switch-theme",
-                        "data": {
-                            "theme": "bloody"
-                        }
+                        "data": [{
+                            "key": "theme",
+                            "value": "bloody"
+                        }]
+                    },
+                    {
+                        "id": "Golden",
+                        "class": "switch-theme",
+                        "data": [{
+                            "key": "theme",
+                            "value": "golden"
+                        }]
                     }
                 ]
             },
             {
                 "id": "Refresh Menu",
                 "href": "/reload?item=menu",
+                "target": "_blank"
+            },
+            {
+                "id": "Console",
+                "href": "/console",
                 "target": "_blank"
             }
         ]

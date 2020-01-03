@@ -1,9 +1,11 @@
 @import "./default";
 @import "./sky";
 @import "./bloody";
+@import "./golden";
 
 $themes: (
     default: $default, 
     sky: $sky, 
-    bloody: $bloody
+    bloody: $bloody, 
+    golden: $golden
 )

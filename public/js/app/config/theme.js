@@ -11,11 +11,9 @@ define(function () {
     }
 
     function initEvent() {
-        $('.switch-theme').on('click', function (el) {
-            var data = $(el).attr("data");
-            alert(JSON.stringify(data));
-            var theme = data.theme;
-            alert(theme);
+        $('.switch-theme').on('click', function () {
+            var theme = $(this).data().theme || "default";
+            $("body").attr("data-theme", theme);
         });
     }
 

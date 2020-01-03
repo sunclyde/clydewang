@@ -2,12 +2,12 @@
 
 header {
     @include themeify {
-        background: themed('color-header-bg');
+        background: themed('color-primary-bg');
     }
     
     a {
         @include themeify {
-            color: themed('color-header-a');
+            color: themed('color-header-link');
         }
     }
 
@@ -15,7 +15,7 @@ header {
         font-family:museo-slab,Georgia,"Times New Roman",Times,serif;
         font-size: 2.3rem;
         @include themeify {
-            text-shadow: 4px 3px 0 themed('color-header-bg'), 9px 8px 0 rgba(0,0,0,0.15);
+            text-shadow: 4px 3px 0 themed('color-primary-shadow'), 9px 8px 0 rgba(0,0,0,0.15);
         }        
     }
 

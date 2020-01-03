@@ -8,7 +8,16 @@
         <a class="icon <%=item.class%>" 
             href="<%=item.href ? item.href : '#'%>" 
             target="<%=item.target ? item.target : "_self"%>"
-            data="<%=JSON.stringify(item.data)%>">
+            <%
+                if(item.data) {
+                    item.data.forEach(function(dataItem){
+            %>
+                data-<%=dataItem.key%>="<%=dataItem.value%>"
+            <%
+                    });
+                }
+            %>
+        >
             <%=item.id%><%=item.child ? " >>" : ""%>
         </a> 
         <%
