@@ -1,5 +1,13 @@
 $default: (
-    color-primary-bg: #1d9d74,
-    color-primary-shadow: darkgreen,
-    color-header-link: white,
-)
+  color-header-bg: #1d9d74,
+  color-primary-shadow: darkgreen,
+  color-header-link: white,
+  color-body-bg:
+    linear-gradient(
+      125deg,
+      rgb(224, 253, 247) 0%,
+      rgb(239, 255, 252) 25%,
+      rgb(232, 255, 251) 50%,
+      rgb(207, 228, 220) 75%
+    )
+);

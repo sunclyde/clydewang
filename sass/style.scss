@@ -1,6 +1,13 @@
+/* global */
+@import './themes/_themeify';
+@import "./responsive";
 @import "./global";
 @import "./header";
+@import "./body";
 @import "./footer";
 @import "./menu";
 @import "./icons";
 @import "./font";
+
+/* pages */
+@import "./pages/library";

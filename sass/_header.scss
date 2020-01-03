@@ -1,8 +1,6 @@
-@import './themes/_themeify';
-
 header {
     @include themeify {
-        background: themed('color-primary-bg');
+        background: themed('color-header-bg');
     }
     
     a {
@@ -16,7 +14,7 @@ header {
         font-size: 2.3rem;
         @include themeify {
             text-shadow: 4px 3px 0 themed('color-primary-shadow'), 9px 8px 0 rgba(0,0,0,0.15);
-        }        
+        }
     }
 
     // header bar

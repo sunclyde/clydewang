@@ -1,0 +1,40 @@
+.cards {
+    width: 100%;
+    height: 3em;
+    text-align: center;
+    @include themeify {
+      background: themed("color-navigation-bg");
+    }
+  
+    @include responsive(small) {
+      text-align: left;
+      position: relative;
+  
+      .cards-container {
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+      }
+  
+      .card {
+        position: relative;
+      }
+    }
+  
+    .card {
+      display: inline-block;
+      line-height: 3rem;
+      margin-right: 1.5rem;
+      font-size: 1.3rem;
+      color: white;
+      cursor: pointer;
+  
+      @include themeify {
+        text-shadow: 1px 1px 0 themed("color-primary-shadow"), 2px 2px 0 rgba(0, 0, 0, 0.15);
+      }
+  
+      &:first-child {
+        margin-left: 2rem;
+      }
+    }
+}

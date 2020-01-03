@@ -1,5 +1,13 @@
 $golden: (
-    color-primary-bg: rgb(221, 188, 0),
-    color-primary-shadow: rgb(175, 126, 0),
-    color-header-link: white,
-)
+  color-header-bg: rgb(221, 188, 0),
+  color-primary-shadow: rgb(175, 126, 0),
+  color-header-link: white,
+  color-body-bg:
+    linear-gradient(
+      125deg,
+      rgb(252, 253, 224) 0%,
+      rgb(255, 255, 239) 25%,
+      rgb(255, 253, 232) 50%,
+      rgb(228, 228, 207) 75%
+    )
+);

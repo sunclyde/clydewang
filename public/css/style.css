@@ -1,5 +1,6 @@
+/* global */
 * {
-  font-family: proxima-nova,"HelveticaNeue",Helvetica,Arial,sans-serif;
+  font-family: proxima-nova, "HelveticaNeue", Helvetica, Arial, sans-serif;
   margin: 0 auto;
 }
 
@@ -14,6 +15,60 @@ a {
 
 html {
   font-size: 16px;
+}
+
+.navigation {
+  width: 100%;
+  height: 3em;
+  text-align: center;
+}
+
+body[data-theme=sky] .navigation {
+  background: lightskyblue;
+}
+
+@media only screen and (max-width: 414px) {
+  .navigation {
+    text-align: left;
+    position: relative;
+  }
+  .navigation .nav-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+  .navigation .nav-item {
+    position: relative;
+  }
+}
+
+.navigation .nav-item {
+  display: inline-block;
+  line-height: 3rem;
+  margin-right: 1.5rem;
+  font-size: 1.3rem;
+  color: white;
+  cursor: pointer;
+}
+
+body[data-theme=default] .navigation .nav-item {
+  text-shadow: 1px 1px 0 darkgreen, 2px 2px 0 rgba(0, 0, 0, 0.15);
+}
+
+body[data-theme=sky] .navigation .nav-item {
+  text-shadow: 1px 1px 0 slategray, 2px 2px 0 rgba(0, 0, 0, 0.15);
+}
+
+body[data-theme=bloody] .navigation .nav-item {
+  text-shadow: 1px 1px 0 saddlebrown, 2px 2px 0 rgba(0, 0, 0, 0.15);
+}
+
+body[data-theme=golden] .navigation .nav-item {
+  text-shadow: 1px 1px 0 #af7e00, 2px 2px 0 rgba(0, 0, 0, 0.15);
+}
+
+.navigation .nav-item:first-child {
+  margin-left: 2rem;
 }
 
 body[data-theme=default] header {
@@ -97,6 +152,22 @@ header .header-rightplaceholder {
   display: inline-block;
   width: 3rem;
   height: 3rem;
+}
+
+body[data-theme=default] {
+  background: linear-gradient(125deg, #e0fdf7 0%, #effffc 25%, #e8fffb 50%, #cfe4dc 75%);
+}
+
+body[data-theme=sky] {
+  background: linear-gradient(125deg, #e0f6fd 0%, #effbff 25%, #e8f9ff 50%, #cfdfe4 75%);
+}
+
+body[data-theme=bloody] {
+  background: linear-gradient(125deg, #fde0e0 0%, #ffefef 25%, #ffe8e8 50%, #e4cfcf 75%);
+}
+
+body[data-theme=golden] {
+  background: linear-gradient(125deg, #fcfde0 0%, #ffffef 25%, #fffde8 50%, #e4e4cf 75%);
 }
 
 footer {
@@ -730,4 +801,59 @@ body[data-theme=golden] .mp-menu h2 {
   src: url(1.woff) format("woff");
   font-weight: 300;
   font-style: normal;
+}
+
+/* pages */
+.cards {
+  width: 100%;
+  height: 3em;
+  text-align: center;
+}
+
+body[data-theme=sky] .cards {
+  background: lightskyblue;
+}
+
+@media only screen and (max-width: 414px) {
+  .cards {
+    text-align: left;
+    position: relative;
+  }
+  .cards .cards-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+  .cards .card {
+    position: relative;
+  }
+}
+
+.cards .card {
+  display: inline-block;
+  line-height: 3rem;
+  margin-right: 1.5rem;
+  font-size: 1.3rem;
+  color: white;
+  cursor: pointer;
+}
+
+body[data-theme=default] .cards .card {
+  text-shadow: 1px 1px 0 darkgreen, 2px 2px 0 rgba(0, 0, 0, 0.15);
+}
+
+body[data-theme=sky] .cards .card {
+  text-shadow: 1px 1px 0 slategray, 2px 2px 0 rgba(0, 0, 0, 0.15);
+}
+
+body[data-theme=bloody] .cards .card {
+  text-shadow: 1px 1px 0 saddlebrown, 2px 2px 0 rgba(0, 0, 0, 0.15);
+}
+
+body[data-theme=golden] .cards .card {
+  text-shadow: 1px 1px 0 #af7e00, 2px 2px 0 rgba(0, 0, 0, 0.15);
+}
+
+.cards .card:first-child {
+  margin-left: 2rem;
 }

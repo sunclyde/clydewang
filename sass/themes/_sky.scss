@@ -1,5 +1,14 @@
 $sky: (
-    color-primary-bg: deepskyblue,
-    color-primary-shadow: slategray,
-    color-header-link: white,
-)
+  color-header-bg: deepskyblue,
+  color-primary-shadow: slategray,
+  color-header-link: white,
+  color-body-bg:
+    linear-gradient(
+      125deg,
+      rgb(224, 246, 253) 0%,
+      rgb(239, 251, 255) 25%,
+      rgb(232, 249, 255) 50%,
+      rgb(207, 223, 228) 75%
+    ),
+  color-navigation-bg: lightskyblue
+);

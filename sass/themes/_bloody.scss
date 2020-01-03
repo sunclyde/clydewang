@@ -1,5 +1,13 @@
 $bloody: (
-    color-primary-bg: lightcoral,
-    color-primary-shadow: saddlebrown,
-    color-header-link: white,
-)
+  color-header-bg: lightcoral,
+  color-primary-shadow: saddlebrown,
+  color-header-link: white,
+  color-body-bg:
+    linear-gradient(
+      125deg,
+      rgb(253, 224, 224) 0%,
+      rgb(255, 239, 239) 25%,
+      rgb(255, 232, 232) 50%,
+      rgb(228, 207, 207) 75%
+    )
+);

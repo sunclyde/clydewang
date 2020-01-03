@@ -1,4 +1,18 @@
 <% include ../global/header.html %>
 <div class="content">
+    <div class="navigation">
+        <div class="nav-container">
+            <% page.categories.forEach(function(category){ %>
+            <a class="nav-item" data-category="<%=category.name%>"><%=category.name%></a>
+            <% }) %>
+        </div>
+    </div>
+    <div class="cards">
+        <div class="cards-container">
+            <% page.cards.forEach(function(card){ %>
+            <a class="card <%=card.rare%>" data-rare="<%=card.rare%>"><%=card.name%></a>
+            <% }) %>
+        </div>
+    </div>
 </div>
 <% include ../global/footer.html %>

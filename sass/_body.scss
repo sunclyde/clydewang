@@ -1,0 +1,5 @@
+body {
+    @include themeifyBody {
+        background: themed('color-body-bg');
+    }
+}
